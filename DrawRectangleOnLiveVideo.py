@@ -19,6 +19,7 @@ while True:
     cv2.rectangle(frame,(x,y),(x+w,y+h),color=(0,0,255),thickness=4)
     cv2.imshow('frame',frame)
 
+    # this means hit the q key to exit...
     if cv2.waitKey(1) & 0xFF ==ord('q'):
         break
 
