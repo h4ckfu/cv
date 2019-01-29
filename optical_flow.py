@@ -2,12 +2,13 @@ import numpy as np
 import cv2 # calcOpticalFlowFarneback, cartToPolar
 
 # Optical Flow is the idea that you can figure out patterns of motion by
-# determining the differences between frames.  This should change color
-# depending on motion - blue is left?  No my left..
-
-# My frames here will eventually be called prev_img and next_img
+# determining the differences between frames.  This video capture should 
+# change color depending on motion in real time. Blue is left?  No my left..
 
 # get one frame before we start looping and make a grayscale version
+
+# VideoCapture(0) means the first camera device it encounters ala webcam.
+# You can load a video there witha  file name instead of the 0 if you wanted.
 cap = cv2.VideoCapture(0)
 ret, frame1=cap.read()
 prev_img = cv2.cvtColor(frame1,cv2.COLOR_BGR2GRAY)
